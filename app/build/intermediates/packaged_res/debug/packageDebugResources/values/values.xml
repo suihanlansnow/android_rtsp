@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">视流</string>
+    <style name="Theme.ShiLiu" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">#060E15</item>
+        <item name="android:colorBackground">#060E15</item>
+        <item name="android:statusBarColor">#060E15</item>
+        <item name="android:navigationBarColor">#060E15</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+</resources>
