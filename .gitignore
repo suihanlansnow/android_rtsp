@@ -7,12 +7,17 @@ build/
 *.iml
 *.ipr
 *.iws
+.vscode/
 captures/
 .externalNativeBuild/
 .cxx/
 
 # 本机 SDK 路径，因设备而异
 local.properties
+
+# 发布签名密钥与口令，严禁提交
+keystore/
+keystore.properties
 
 # 构建产物
 app/build/

@@ -64,6 +64,17 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 
 Windows 下使用 `gradlew.bat`，其余相同。
 
+### Release 包与签名
+
+```bash
+./gradlew assembleRelease
+# 产物位于 app/build/outputs/apk/release/app-release.apk
+```
+
+发布签名读取项目根目录的 `keystore.properties`（含 `storeFile`、`storePassword`、`keyAlias`、`keyPassword`），该文件与 `keystore/` 目录均被 `.gitignore` 排除，不会进入仓库。没有该配置时自动回退为 debug 签名，因此他人克隆后仍可直接构建出可安装的 release 包。
+
+> 若本机网络无法下载 Android Lint 依赖，可加 `-x lintVitalRelease -x lintVitalReportRelease -x lintVitalAnalyzeRelease` 跳过发布版 Lint 校验。
+
 > 项目 `gradle-wrapper.properties` 使用腾讯云镜像下载 Gradle 8.7，国内网络无需额外配置；如需切换回官方源，将 `distributionUrl` 改为 `https://services.gradle.org/distributions/gradle-8.7-bin.zip`。
 
 ## 使用说明
